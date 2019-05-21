@@ -12,7 +12,7 @@ AWS Media Convert를 사용하기 위한 람다함수를 생성하는 Terraform 
 
 ```hcl
 module "converter" {
-  source = "komskb/terraform-module-converter"
+  source = "komskb/terraform-aws-converter"
 
   project = "${var.project}"
   environment = "${var.environment}"
