@@ -40,7 +40,7 @@ Terraform version 0.11.13 or newer is required for this module to work.
 | environment | Deploy environment | string | `"production"` | no |
 | jwt\_secret\_key | Check jwt secret key | string | n/a | yes |
 | project | Project name to use on all resources created (VPC, ALB, etc) | string | n/a | yes |
-| tags | A map of tags to use on all resources | map | `{}` | no |
+| tags | A map of tags to use on all resources | map(string) | `{}` | no |
 
 ## Outputs
 
