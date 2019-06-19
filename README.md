@@ -14,21 +14,21 @@ AWS Media Convert를 사용하기 위한 람다함수를 생성하는 Terraform 
 module "converter" {
   source = "komskb/converter/aws"
 
-  project = "${var.project}"
-  environment = "${var.environment}"
-  api_endpoint = "${format("https://%s/api/v1", var.domain)}"
-  jwt_secret_key = "${module.ecs.jwt_secret_key}"
+  project = var.project
+  environment = var.environment
+  api_endpoint = format("https://%s/api/v1", var.domain)
+  jwt_secret_key = module.ecs.jwt_secret_key
 
   tags = {
-    Terraform = "${var.terraform_repo}"
-    Environment = "${var.environment}"
+    Terraform = var.terraform_repo
+    Environment = var.environment
   }
 }
 ```
 
 ## Terraform version
 
-Terraform version 0.11.13 or newer is required for this module to work.
+Terraform version 0.12.0 or newer is required for this module to work.
 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
